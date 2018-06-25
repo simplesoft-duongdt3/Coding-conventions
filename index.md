@@ -34,6 +34,12 @@
 
 5. Viết commit message bao gồm thông tin thay đổi và link task (nếu có)
 
+### Useful shortcuts for Android Studio
+
+[Link 1](https://tech.fleka.me/android-shortcuts-and-tricks-to-boost-up-your-productivity-944548174582)
+
+[Link 2](https://mmbs.github.io/tools/ide/2016/11/07/android-studio-tips-tricks/)
+
 ### Kotlin Clean Code
 
 [https://blog.philipphauer.de/clean-code-kotlin/](https://blog.philipphauer.de/clean-code-kotlin/)
