@@ -1,3 +1,12 @@
+
+## Coding convention
+
+
+## Tham khảo
+- [CodePath android guides](https://github.com/codepath/android_guides/wiki)
+
+- [Android best practices](https://github.com/futurice/android-best-practices)
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/simplesoft-duongdt3/Coding-conventions/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
