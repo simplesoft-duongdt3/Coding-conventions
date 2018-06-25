@@ -1,6 +1,8 @@
 
 ## Coding convention
 
+## Kotlin style
+https://android.github.io/kotlin-guides/style.html
 
 ## Tham khảo
 - [CodePath android guides](https://github.com/codepath/android_guides/wiki)
