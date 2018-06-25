@@ -44,7 +44,7 @@
 
 [https://blog.philipphauer.de/clean-code-kotlin/](https://blog.philipphauer.de/clean-code-kotlin/)
 
-Kotlin style
+### Kotlin coding style
 
 [https://android.github.io/kotlin-guides/style.html](https://android.github.io/kotlin-guides/style.html)
 
