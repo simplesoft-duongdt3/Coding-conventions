@@ -4,16 +4,20 @@
 ### 4 Principles of Simple Design (4 nguyên lý để có đoạn code đơn giản, dễ đọc, dễ hiểu)
 
 1. Keep it Small
+  
   Viết hàm nhỏ, làm một việc để dễ review, dễ kiểm soát, giảm lỗi logic.
   
 2. Minimize Duplication (Don't Repeat Yourself - DRY)
+  
   Hạn chế trùng lặp, nếu phát hiện lặp nên tiến hành refactor thành class chung, hàm chung, biến chung...
   
 3. Maximize Clarity
+  
   Tên biến, tên hàm, tên lớp phải rõ ràng, chấp nhận tên dài để thể hiện hết ý nghĩa.
   Không có tạo sự bất ngờ khi viết hàm, tránh trường hợp thực thi những việc khác với tên hàm.
 
 4. Runs all tests
+  
   Mọi hàm phải được test để đảm bảo không tồn tại hàm không bao giờ được test. (có thể dùng Unit test)
 
 [Ref link](https://www.theguild.nl/4-rules-of-simple-design/)
