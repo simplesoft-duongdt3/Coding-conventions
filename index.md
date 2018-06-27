@@ -44,8 +44,8 @@ Topics:
 
 ```javascript
 //WRONG
-val customerInfo
-val customerRecord
+val customerInfo: Customer
+val customerRecord: Customer
 
 fun getCustomerInfo()
 fun getCustomerDetail()
@@ -54,25 +54,39 @@ fun getCustomerRecord()
 
 ```javascript
 //CORRECT
-val customer
+val selectedCustomer: Customer
 
-fun getCustomer()
+fun getCustomer(): Customer
 ```
 2. Đặt tên biến, hàm không rõ ràng, không thể hiện rõ mục đích sử dụng
 
 ```javascript
 //WRONG
-val days
+val days : Int
 
-fun getItems()
+fun getItems(): List<Item>
 ```
 
 ```javascript
 //CORRECT
-val daysSinceCreation
-val durationInDays
+val daysSinceCreation: Int
+val durationInDays: Int
 
-fun getRemovedItems()
+fun getRemovedItems(): List<Item>
+```
+
+3. Đặt tên biến, hàm bằng từ lóng, viết tắt (trừ những trường hợp từ viết tắt cực kỳ thông dụng)
+
+```javascript
+//WRONG
+val modyddmmyy: Date
+val uId: Long
+```
+
+```javascript
+//CORRECT
+val daysSinceCreation: Date
+val userId: Long
 ```
 
 ### <a name="anchor_android_studio_shortcuts"></a>Useful shortcuts for Android Studio
