@@ -1,9 +1,12 @@
-and we can even [link](#anchor_tip_clean_code) to it so:
-
+Topics:
+1. [4 Principles of Simple Design (4 nguyên lý để có đoạn code đơn giản, dễ đọc, dễ hiểu)](#anchor_principles_of_simple_design)
+2. [Nguyên tắc comit](#anchor_commit_rule)
+3. [Tips Clean Code](#anchor_tip_clean_code)
+4. [Useful shortcuts for Android Studio](#anchor_android_studio_shortcuts)
 
 ## Coding convention
 
-### 4 Principles of Simple Design (4 nguyên lý để có đoạn code đơn giản, dễ đọc, dễ hiểu)
+### <a name="anchor_principles_of_simple_design"></a>4 Principles of Simple Design (4 nguyên lý để có đoạn code đơn giản, dễ đọc, dễ hiểu)
 
 1. Keep it Small
   
@@ -24,7 +27,7 @@ and we can even [link](#anchor_tip_clean_code) to it so:
 
 [Ref link](https://www.theguild.nl/4-rules-of-simple-design/)
 
-### Nguyên tắc comit 
+### <a name="anchor_commit_rule"></a>Nguyên tắc comit 
 
 1. Commit luôn là workable code, tức là lấy bất kỳ revision nào cũng phải build và chạy được ứng dụng.
 
@@ -50,7 +53,7 @@ if (isAwesome){
 }
 ```
 
-### Useful shortcuts for Android Studio
+### <a name="anchor_android_studio_shortcuts"></a>Useful shortcuts for Android Studio
 
 [Link 1](https://tech.fleka.me/android-shortcuts-and-tricks-to-boost-up-your-productivity-944548174582)
 
