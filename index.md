@@ -1,8 +1,9 @@
 Topics:
 1. [4 Principles of Simple Design (4 nguyên lý để có đoạn code đơn giản, dễ đọc, dễ hiểu)](#anchor_principles_of_simple_design)
 2. [Nguyên tắc comit](#anchor_commit_rule)
-3. [Tips Clean Code](#anchor_tip_clean_code)
-4. [Useful shortcuts for Android Studio](#anchor_android_studio_shortcuts)
+3. [Clean Code](#anchor_clean_code)
+4. [Tips Clean Code](#anchor_tip_clean_code)
+5. [Useful shortcuts for Android Studio](#anchor_android_studio_shortcuts)
 
 ## Coding convention
 
@@ -38,6 +39,29 @@ Topics:
 4. Luôn luôn tự review tất cả những thay đổi trước khi commit, tự review sẽ giúp phát hiện những thay đổi không cần thiết, những lỗi logic cơ bản.
 
 5. Viết commit message bao gồm thông tin thay đổi và link task (nếu có)
+
+
+### <a name="anchor_clean_code"></a> Clean Code
+#### Clean code là gì?
+![Clean code](https://github.com/simplesoft-duongdt3/Coding-conventions/blob/master/clean_code.jpeg)
+
+Trước hết, chúng ta phải đưa ra một hướng nhìn, một cách suy nghĩ về viết code chung, chúng ta sẽ dễ đồng cảm và cảm nhận, dễ dàng làm việc chung hơn.
+
+- Code như thế nào mới là Clean, có chuẩn chung gì hay không?
+- Clean Code quan trọng hay không, nếu tôi chỉ viết cho một mình tôi xem?
+- Clean Code có dễ hay không, nếu khó quá có nên bỏ qua hay không?
+
+Clean Code bao gồm rất nhiều hiểu biết và thói quen tốt để tạo nên một cách viết code dễ hiểu, dễ đọc, hạn chế lỗi tiềm ẩn.
+Một trong những cuốn sách gối đầu giường của tín đồ Clean Code là *“Clean Code: A Handbook of Agile Software Craftsmanship” by Robert C. Martin*
+
+Ở đây chỉ trình bày một phần nhỏ trong cuốn sách trên, như một lời giới thiệu về một cách viết code không đơn giản chỉ là *"có thể chạy được"*, mà còn hướng tới "Clean Code".
+
+Đối với lập trình viên, đọc một đoạn code của chính mình sau 1 - 2 tháng nhìn lại, phần lớn thốt lên "Thằng quái nào viết đoạn này? Sao khó hiểu vậy? Tao đập đi làm lại còn nhanh hơn!". Huống gì là đọc code của người khác, có phong cách khác, suy nghĩ khác.
+
+Do đó, viết code mục đích chính quan trọng nhất là cho người khác xem, người khác đọc, người khác hiểu và bảo trì code sau này (người khác ấy có thể là chính mình sau 1 thời gian không làm việc trực tiếp trên project ấy nữa).
+Việc tạo ra một cái quy định Clean Code, tạo một trang Coding conventions rất dễ dàng, nhưng phần khó nhất là duy trì liên tục, có sự kiểm tra và giám sát lẫn nhau, giám sát chính mình, dưới áp lực của deadline.
+
+Mục đích chính của chúng ta khi tìm hiểu Clean Code là tạo thành một thói quen tốt khi viết code, để giảm thiểu những vấn đề do code xấu gây ra và dễ dàng phối hợp trong team, viết chung một phong cách sẽ dễ dàng hiểu code nhau hơn.
 
 ### <a name="anchor_tip_clean_code"></a>Tips Clean Code
 1. Đặt tên hàm, biến sử dụng từ có nghĩa chung chung, na ná nhau, dễ nhầm lẫn (info, record, detail ...) làm tiền tố/hậu tố
@@ -79,13 +103,13 @@ fun getRemovedItems(): List<Item>
 
 ```javascript
 //WRONG
-val modyddmmyy: Date
+val modyddmmyy: Long
 val uId: Long
 ```
 
 ```javascript
 //CORRECT
-val daysSinceCreation: Date
+val modificationTimestamp: Long
 val userId: Long
 ```
 
@@ -114,6 +138,9 @@ fun count(l: List<Customer>)
 //CORRECT
 fun countExpiredCustomer(customers: List<Customer>)
 ```
+
+6. Hàm dài, khó hiểu, bao gồm nhiều thứ
+
 
 ### <a name="anchor_android_studio_shortcuts"></a>Useful shortcuts for Android Studio
 
