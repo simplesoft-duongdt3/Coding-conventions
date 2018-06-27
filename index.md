@@ -43,7 +43,7 @@ Topics:
 
 ### <a name="anchor_clean_code"></a> Clean Code
 #### Clean code là gì?
-![Clean code](https://github.com/simplesoft-duongdt3/Coding-conventions/blob/master/clean_code.jpeg)
+![Clean code](https://simplesoft-duongdt3.github.io/Coding-conventions/clean_code.jpeg)
 
 Trước hết, chúng ta phải đưa ra một hướng nhìn, một cách suy nghĩ về viết code chung, chúng ta sẽ dễ đồng cảm và cảm nhận, dễ dàng làm việc chung hơn.
 
