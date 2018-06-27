@@ -9,20 +9,20 @@ Topics:
 
 ### <a name="anchor_principles_of_simple_design"></a>4 Principles of Simple Design (4 nguyên lý để có đoạn code đơn giản, dễ đọc, dễ hiểu)
 
-1. Keep it Small
+#### 1. Keep it Small
   
   Viết hàm nhỏ, làm một việc để dễ review, dễ kiểm soát, giảm lỗi logic.
   
-2. Minimize Duplication (Don't Repeat Yourself - DRY)
+#### 2. Minimize Duplication (Don't Repeat Yourself - DRY)
   
   Hạn chế trùng lặp, nếu phát hiện lặp nên tiến hành refactor thành class chung, hàm chung, biến chung...
   
-3. Maximize Clarity
+#### 3. Maximize Clarity
   
   Tên biến, tên hàm, tên lớp phải rõ ràng, chấp nhận tên dài để thể hiện hết ý nghĩa.
   Không có tạo sự bất ngờ khi viết hàm, tránh trường hợp thực thi những việc khác với tên hàm.
 
-4. Runs all tests
+#### 4. Runs all tests
   
   Mọi hàm phải được test để đảm bảo không tồn tại hàm không bao giờ được test. (có thể dùng Unit test)
 
@@ -30,13 +30,13 @@ Topics:
 
 ### <a name="anchor_commit_rule"></a>Nguyên tắc comit 
 
-1. Commit luôn là workable code, tức là lấy bất kỳ revision nào cũng phải build và chạy được ứng dụng.
+#### 1. Commit luôn là workable code, tức là lấy bất kỳ revision nào cũng phải build và chạy được ứng dụng.
 
-2. Commit nhỏ gọn, nhằm mục đích dễ tự review và người khác review, nếu xây dựng tính năng mới thì nên chia thành nhiều commit nhỏ.
+#### 2. Commit nhỏ gọn, nhằm mục đích dễ tự review và người khác review, nếu xây dựng tính năng mới thì nên chia thành nhiều commit nhỏ.
 
-3. Tránh commit chung nhiều task với nhau, khi cần revert rất khó xử lý.
+#### 3. Tránh commit chung nhiều task với nhau, khi cần revert rất khó xử lý.
 
-4. Luôn luôn tự review tất cả những thay đổi trước khi commit, tự review sẽ giúp phát hiện những thay đổi không cần thiết, những lỗi logic cơ bản.
+#### 4. Luôn luôn tự review tất cả những thay đổi trước khi commit, tự review sẽ giúp phát hiện những thay đổi không cần thiết, những lỗi logic cơ bản.
 
 5. Viết commit message bao gồm thông tin thay đổi và link task (nếu có)
 
@@ -159,7 +159,7 @@ p/s: Side effect là ánh trăng lừa dối.
 [Ref link](https://medium.com/coding-skills/clean-code-101-meaningful-names-and-functions-bf450456d90c)
 
 ### <a name="anchor_tip_clean_code"></a>Tips Clean Code
-1. Đặt tên hàm, biến sử dụng từ có nghĩa chung chung, na ná nhau, dễ nhầm lẫn (info, record, detail ...) làm tiền tố/hậu tố
+#### 1. Đặt tên hàm, biến sử dụng từ có nghĩa chung chung, na ná nhau, dễ nhầm lẫn (info, record, detail ...) làm tiền tố/hậu tố
 
 ```javascript
 //WRONG
@@ -177,7 +177,7 @@ val selectedCustomer: Customer
 
 fun getCustomer(): Customer
 ```
-2. Đặt tên biến, hàm không rõ ràng, không thể hiện rõ mục đích sử dụng
+#### 2. Đặt tên biến, hàm không rõ ràng, không thể hiện rõ mục đích sử dụng
 
 ```javascript
 //WRONG
@@ -194,7 +194,7 @@ val durationInDays: Int
 fun getRemovedItems(): List<Item>
 ```
 
-3. Đặt tên biến, hàm bằng từ lóng, viết tắt (trừ những trường hợp từ viết tắt cực kỳ thông dụng)
+#### 3. Đặt tên biến, hàm bằng từ lóng, viết tắt (trừ những trường hợp từ viết tắt cực kỳ thông dụng)
 
 ```javascript
 //WRONG
@@ -208,7 +208,7 @@ val modificationTimestamp: Long
 val userId: Long
 ```
 
-4. Đặt tên hàm biến quá rõ ràng, gắn với loại dữ liệu, dài không cần thiết
+#### 4. Đặt tên hàm biến quá rõ ràng, gắn với loại dữ liệu, dài không cần thiết
 
 vd: trường hợp thường gặp nhất là List, ArrayList thường thêm tiền tố List, nếu sau này đổi loại dự liệu thành Array thì tên sẽ không đồng nhất với kiểu dữ liệu, ta nên dùng dạng thêm s, es để biểu diễn số nhiều của biến/hàm.
 ```javascript
@@ -222,7 +222,7 @@ val clients: List<Client>
 val newClients: List<Client>
 ```
 
-5. Đặt tên hàm biến ngắn, không rõ ràng, khó hiểu. 
+#### 5. Đặt tên hàm biến ngắn, không rõ ràng, khó hiểu. 
 
 Cố gắng đặt tên hàm và biến rõ ràng nhất có thể, chấp nhận tên dài, để người khác đọc code sẽ giảm bớt thời gian suy nghĩ, tăng tốc độ đọc code và dễ hiểu.
 
@@ -236,7 +236,7 @@ fun count(l: List<Customer>)
 fun countExpiredCustomer(customers: List<Customer>)
 ```
 
-6. Hàm dài, khó hiểu, bao gồm nhiều việc như load dữ liệu, xử lý dữ liệu chung 1 hàm, nên tách hàm con nếu thấy số dòng của hàm gần bằng màn hình IDE.
+#### 6. Hàm dài, khó hiểu, bao gồm nhiều việc như load dữ liệu, xử lý dữ liệu chung 1 hàm, nên tách hàm con nếu thấy số dòng của hàm gần bằng màn hình IDE.
 
 ### <a name="anchor_android_studio_shortcuts"></a>Useful shortcuts for Android Studio
 
