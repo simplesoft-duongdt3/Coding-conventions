@@ -209,6 +209,7 @@ val userId: Long
 ```
 
 4. Đặt tên hàm biến quá rõ ràng, gắn với loại dữ liệu, dài không cần thiết
+
 vd: trường hợp thường gặp nhất là List, ArrayList thường thêm tiền tố List, nếu sau này đổi loại dự liệu thành Array thì tên sẽ không đồng nhất với kiểu dữ liệu, ta nên dùng dạng thêm s, es để biểu diễn số nhiều của biến/hàm.
 ```javascript
 //WRONG
@@ -221,7 +222,8 @@ val clients: List<Client>
 val newClients: List<Client>
 ```
 
-5. Đặt tên hàm biến ngắn, không rõ ràng, khó hiểu
+5. Đặt tên hàm biến ngắn, không rõ ràng, khó hiểu. 
+
 Cố gắng đặt tên hàm và biến rõ ràng nhất có thể, chấp nhận tên dài, để người khác đọc code sẽ giảm bớt thời gian suy nghĩ, tăng tốc độ đọc code và dễ hiểu.
 
 ```javascript
