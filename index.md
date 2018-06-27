@@ -55,7 +55,24 @@ fun getCustomerRecord()
 ```javascript
 //CORRECT
 val customer
+
 fun getCustomer()
+```
+2. Đặt tên biến, hàm không rõ ràng, không thể hiện rõ mục đích sử dụng
+
+```javascript
+//WRONG
+val days
+
+fun getItems()
+```
+
+```javascript
+//CORRECT
+val daysSinceCreation
+val durationInDays
+
+fun getRemovedItems()
 ```
 
 ### <a name="anchor_android_studio_shortcuts"></a>Useful shortcuts for Android Studio
