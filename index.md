@@ -63,6 +63,101 @@ Việc tạo ra một cái quy định Clean Code, tạo một trang Coding conv
 
 Mục đích chính của chúng ta khi tìm hiểu Clean Code là tạo thành một thói quen tốt khi viết code, để giảm thiểu những vấn đề do code xấu gây ra và dễ dàng phối hợp trong team, viết chung một phong cách sẽ dễ dàng hiểu code nhau hơn.
 
+#### Meaningful names (Đặt tên có nghĩa)
+
+Tên biến, tên hàm, tên lớp được gọi là có nghĩa khi nó cho chúng ta biết:
++ Lý do tồn tại (WHY)
++ Dùng để làm gì (WHAT)
++ Dùng như thế nào (HOW)
+Và đặt biệt hơn, nếu tên không diễn tả hết những yêu cầu trên mà cần phải có comment để cho rõ ràng -> tên chưa đủ rõ ràng và dễ hiểu.
+
+```javascript
+//WRONG
+// elapsed time in days
+val d: Int
+```
+
+```javascript
+//CORRECT
+val elapsedTimeInDays: Int
+```
+#### Đặt tên tương tự nhau, dễ gây nhầm lẫn, khó phân biệt
+Vd: bạn thử phân biệt 2 lớp dưới
+```javascript
+class XYZControllerForEfficientHandlingOfStrings 
+
+class XYZControllerForEfficientStorageOfStrings
+```
+#### Đặt tên phải phát âm được (English)
+
+```javascript
+//WRONG
+class DtaRcrd102 {
+    val genymdhms: Long
+    val modymdhms: Long
+}
+```
+
+```javascript
+//CORRECT
+class Customer {
+    val generationTimestamp: Long
+    val modificationTimestamp: Long
+}
+```
+
+#### Đặt tên biến dễ tìm kiếm, tránh magic number và hard-code string
+
+```javascript
+//WRONG
+var sum = 0
+for (i in 0 until 100) {
+  val realTaskDays = tasks[i] * 4
+  val realTaskWeeks = (realdays / 5)
+  sum += realTaskWeeks
+}
+```
+
+```javascript
+//CORRECT
+const val WORK_DAYS_PER_WEEK = 5
+const val NUMBER_OF_TASKS = 100
+val realDaysPerIdealDay = 4
+var sum = 0
+for (i in 0 until NUMBER_OF_TASKS) {
+  val realTaskDays = tasks[i] * realDaysPerIdealDay
+  val realTaskWeeks = (realdays / WORK_DAYS_PER_WEEK)
+  sum += realTaskWeeks
+}
+```
+
+#### Tên lớp
+Tên lớp và object phải là danh từ hoặc cụm danh từ (vd: Customer, WikiPage, Account, and AddressParser...), không được sử dụng động từ làm tên lớp, tên object.
+Tránh dùng những từ chung chung trong tên lớp (vd: Data, Info, Detail...)
+
+#### Tên hàm
+Tên hàm phải là động từ hoặc cụm động từ (vd: requestPayment, deletePage, save...)
+
+#### Mỗi khái niệm chỉ dùng 1 từ / cụm từ thống nhất.
+vd: 
++ fetchCustomers, retrieveCustomers, and getCustomers...
++ removeCustomer, deleteCustomer ...
+
+#### Hàm ngắn, chỉ làm một việc
+Không gộp chung nhiều logic vào 1 hàm, nên tách ra khi hàm gần bằng màn hình IDE.
+
+#### Tham số hàm ít
+Hạn chế truyền quá nhiều (> 3) tham số vào hàm.
+
+#### Đóng gói tham số hàm
+Nên đóng gói tham số gọi hàm thành object để giảm tham số gọi hàm.
+
+#### Không có hiệu ứng lề (side effects)
+Side effect là hiệu ứng bất ngờ, không thể hiện trong tên hàm, tên lớp, có thể gây ra lỗi logic tiềm ẩn.
+p/s: Side effect là ánh trăng lừa dối.
+
+[Ref link](https://medium.com/coding-skills/clean-code-101-meaningful-names-and-functions-bf450456d90c)
+
 ### <a name="anchor_tip_clean_code"></a>Tips Clean Code
 1. Đặt tên hàm, biến sử dụng từ có nghĩa chung chung, na ná nhau, dễ nhầm lẫn (info, record, detail ...) làm tiền tố/hậu tố
 
@@ -139,8 +234,7 @@ fun count(l: List<Customer>)
 fun countExpiredCustomer(customers: List<Customer>)
 ```
 
-6. Hàm dài, khó hiểu, bao gồm nhiều thứ
-
+6. Hàm dài, khó hiểu, bao gồm nhiều việc như load dữ liệu, xử lý dữ liệu chung 1 hàm, nên tách hàm con nếu thấy số dòng của hàm gần bằng màn hình IDE.
 
 ### <a name="anchor_android_studio_shortcuts"></a>Useful shortcuts for Android Studio
 
