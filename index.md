@@ -1,3 +1,5 @@
+and we can even [link](#anchor_tip_clean_code) to it so:
+
 
 ## Coding convention
 
@@ -33,6 +35,20 @@
 4. Luôn luôn tự review tất cả những thay đổi trước khi commit, tự review sẽ giúp phát hiện những thay đổi không cần thiết, những lỗi logic cơ bản.
 
 5. Viết commit message bao gồm thông tin thay đổi và link task (nếu có)
+
+### <a name="anchor_tip_clean_code"></a>Tips Clean Code
+
+```javascript
+if (isAwesome){
+  return true
+}
+```
+
+```
+if (isAwesome){
+  return true
+}
+```
 
 ### Useful shortcuts for Android Studio
 
