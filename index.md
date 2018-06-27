@@ -40,17 +40,22 @@ Topics:
 5. Viết commit message bao gồm thông tin thay đổi và link task (nếu có)
 
 ### <a name="anchor_tip_clean_code"></a>Tips Clean Code
+1. Đặt tên hàm, biến sử dụng từ có nghĩa chung chung, na ná nhau, dễ nhầm lẫn (info, record, detail ...) làm tiền tố/hậu tố
 
 ```javascript
-if (isAwesome){
-  return true
-}
+//WRONG
+val customerInfo
+val customerRecord
+
+fun getCustomerInfo()
+fun getCustomerDetail()
+fun getCustomerRecord()
 ```
 
-```
-if (isAwesome){
-  return true
-}
+```javascript
+//CORRECT
+val customer
+fun getCustomer()
 ```
 
 ### <a name="anchor_android_studio_shortcuts"></a>Useful shortcuts for Android Studio
